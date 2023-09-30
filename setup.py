@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name = 'sick_scan_tcp',
-    version = '1.0.0',
+    version = '1.0.1',
     description = 'Library for interacting with SICK LIDAR sensors with TCP Connection',
     long_description = long_description,
     long_description_content_type = 'text/markdown',
