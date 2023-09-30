@@ -157,30 +157,3 @@ class SickScan:
             buffer = 10240
         )
         return data
-
-        
-if __name__ == '__main__':
-    sick_scan = SickScan(
-        ip = "192.168.1.110",
-        port = 2111
-    )
-
-    # sick_scan.set_ip_addres(
-    #     ip='192.168.1.110'
-    # )
-    # sick_scan.set_start_stop_angle(
-    #     start_angle = 20,
-    #     stop_angle = 135
-    # )
-
-    try:
-        while True:
-            telegram = sick_scan.scan()
-            try:
-                angles, values = sick_scan.extract_telegram(telegram=telegram)
-                sick_scan.to_cartesian(angles=angles, distances=values)
-            except Exception as e:
-                print(len(telegram))
-            time.sleep(0.1)
-    except KeyboardInterrupt:
-        sick_scan.release()
