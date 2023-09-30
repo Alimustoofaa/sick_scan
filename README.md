@@ -2,6 +2,14 @@
 
 This code provides a comprehensive interface for interacting with a SICK LIDAR sensor with TCP connection, enabling users to configure parameters, retrieve scan data, and perform data processing tasks. It is a valuable tool for applications that require interfacing with LIDAR sensors for environmental sensing, mapping, and other related tasks.
 
+## Install
+
+```shell
+git clone https://github.com/Alimustoofaa/sick_scan.git
+cd sick_scan
+pip3 install .
+```
+
 ## Features
 
 * Connect to TCP
@@ -83,7 +91,6 @@ This code provides a comprehensive interface for interacting with a SICK LIDAR s
   * Parse the value count
   * Grab the appropriate number of value tokens that follow, discard the rest ** Parse each value, and scale it by the scaling factor
   * Calculate the angles corresponding to each measured value (`start_angle + step * n`)
-
 
 **Reference:**
 
